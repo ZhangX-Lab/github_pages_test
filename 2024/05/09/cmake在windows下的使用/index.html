@@ -425,8 +425,9 @@ cmake和gcc用法
 </ol>
 </li>
 <li><ol start="2">
-<li>在终端写cmake .. -Dproj&#x3D;<project name> -G “MinGW Makefiles”<br>.. 表示当前目录的上一级，这里具体要看CmakeList.txt的位置,也就是你的文件放置形式。可能你的Cmakelist文件跟你的main文件不再同一级目录，也可能在同一级目录。<br>“MinGW Makefiles” 表示是使用MinGW，因为是在windows下，是默认有MVSC的，所以不声明的话基本上就是使用MVSC</li>
+<li>在终端写cmake .. -Dproj&#x3D;<project name> -G “MinGW Makefiles”</li>
 </ol>
+<p>.. 表示当前目录的上一级，这里具体要看CmakeList.txt的位置,也就是你的文件放置形式。可能你的Cmakelist文件跟你的main文件不再同一级目录，也可能在同一级目录。<br>“MinGW Makefiles” 表示是使用MinGW，因为是在windows下，是默认有MVSC的，所以不声明的话基本上就是使用MVSC</p>
 </li>
 <li><ol start="3">
 <li>之后再终端写 mingw32-make<br>  如果时在Linux下，直接写make就行，但是windows下面没有make，mingw32-make是Mingw中一起携带的，你也可以将之重命名为make。</li>
