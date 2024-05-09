@@ -419,21 +419,16 @@ cmake和gcc用法
 <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>首先是：什么是GCC？GCC是一种编译工具，可以实现预编译、编译、汇编、链接整个过程，这整个过程将高级语言翻译成了机器语言。但是，GCC是针对于LINUX的，在windows中并没有，因为微软有自己的开发，叫做MSVC，当然，GCC后来在windows也有，叫做MinGW，MinGW就是GCC在windows下的名称，我们使用它也可以像是GCC之于Linux一样。</p>
 <p>其次，为什么会有cmake？当我们的文件很大时，使用GCC是不方便的，所以有了make，make是一个构建生成器，通过写makefile文件来指定特定的项目构建工程，但make也有很多不足，像写makefile时，大工程下是很复杂的，往往改一点，makefile就要改很多地方。于是，就出现了cmake，cmake可以通过写CmakeList.txt，然后通过make，将该文件翻译为之前需要通过写makefile实现的作用，但是却没有makefile那样的副作用。</p>
 <h2 id="cmake和gcc用法"><a href="#cmake和gcc用法" class="headerlink" title="cmake和gcc用法"></a>cmake和gcc用法</h2><p>怎么使用cmake呢？</p>
-<ul>
-<li><ol>
-<li>写CmakeList.txt，在已建立的工程下，写对应的CmakeList.txt，涉及多个目录就需要多个CmakeList.txt，之间有相互关联。</li>
-</ol>
+<ol>
+<li><p>写CmakeList.txt，在已建立的工程下，写对应的CmakeList.txt，涉及多个目录就需要多个CmakeList.txt，之间有相互关联。</p>
 </li>
-<li><ol start="2">
-<li>在终端写cmake .. -Dproj&#x3D;<project name> -G “MinGW Makefiles”</li>
-</ol>
-<p>.. 表示当前目录的上一级，这里具体要看CmakeList.txt的位置,也就是你的文件放置形式。可能你的Cmakelist文件跟你的main文件不再同一级目录，也可能在同一级目录。<br>“MinGW Makefiles” 表示是使用MinGW，因为是在windows下，是默认有MVSC的，所以不声明的话基本上就是使用MVSC</p>
+<li><p>在终端写cmake .. -Dproj&#x3D;<project name> -G “MinGW Makefiles”</p>
 </li>
-<li><ol start="3">
-<li>之后再终端写 mingw32-make<br>  如果时在Linux下，直接写make就行，但是windows下面没有make，mingw32-make是Mingw中一起携带的，你也可以将之重命名为make。</li>
 </ol>
-</li>
-</ul>
+<p>  .. 表示当前目录的上一级，这里具体要看CmakeList.txt的位置,也就是你的文件放置形式。可能你的Cmakelist文件跟你的main文件不再同一级目录，也可能在同一级目录。<br>  “MinGW Makefiles” 表示是使用MinGW，因为是在windows下，是默认有MVSC的，所以不声明的话基本上就是使用MVSC</p>
+<ol start="3">
+<li>之后再终端写 mingw32-make<br> 如果时在Linux下，直接写make就行，但是windows下面没有make，mingw32-make是Mingw中一起携带的，你也可以将之重命名为make。</li>
+</ol>
 <p>这样，就是cmake的用法，之后就会产生一个可执行的exe文件，可以通过.&#x2F;main来运行，.&#x2F;表示当前目录，所以具体要看生成的main.exe文件的位置。</p>
 <p>注意：这里是用到了cmake去构建C&#x2F;C++项目,再用gcc编译生成文件。与vscode的插件是无关的，也就是说不用vscode提供的右上角编译运行按钮。vscode仅作为编写代码的平台。</p>
 <h2 id="推荐文章："><a href="#推荐文章：" class="headerlink" title="推荐文章："></a>推荐文章：</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/448884264">捋一捋gcc&#x2F;g++&#x2F;MingW&#x2F;MSVC与make&#x2F;CMake的关系</a></p>
