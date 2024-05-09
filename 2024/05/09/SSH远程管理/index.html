@@ -4,8 +4,19 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="great something, ZhangXing blogs">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="ZhangXing blogs">
+    <meta name="description" content="SSH远程管理
+
+目录
+
+1. 使用方法
+1.1 密码连接
+1.2 密匙连接
+
+
+2. 文件传输
+
+1. 使用方法1.1 密码连接可以直接在tenmial中输入ssh &amp;lt;username&amp;gt;@&amp;lt;ip&amp;gt;进行连接，输入密码">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +28,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>great something | ZhangXing blogs</title>
+    <title>ZhangXing blogs</title>
     <link rel="icon" type="image/png" href="/github_pages_test/favicon.png">
     
 
@@ -334,12 +345,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/github_pages_test/medias/featureimages/9.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/github_pages_test/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">great something</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -396,8 +407,53 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="first-use-hexo-github-gh-pages"><a href="#first-use-hexo-github-gh-pages" class="headerlink" title="first use hexo + github gh-pages"></a>first use hexo + github gh-pages</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> *argv[])</span></span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;best serach\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+                <center><h1>SSH远程管理</h1></center>
+
+<p><a href="">目录</a></p>
+<ul>
+<li><a href="#1-%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95">1. 使用方法</a><ul>
+<li><a href="#11-%E5%AF%86%E7%A0%81%E8%BF%9E%E6%8E%A5">1.1 密码连接</a></li>
+<li><a href="#12-%E5%AF%86%E5%8C%99%E8%BF%9E%E6%8E%A5">1.2 密匙连接</a></li>
+</ul>
+</li>
+<li><a href="#2-%E6%96%87%E4%BB%B6%E4%BC%A0%E8%BE%93">2. 文件传输</a></li>
+</ul>
+<h3 id="1-使用方法"><a href="#1-使用方法" class="headerlink" title="1. 使用方法"></a>1. 使用方法</h3><h4 id="1-1-密码连接"><a href="#1-1-密码连接" class="headerlink" title="1.1 密码连接"></a>1.1 密码连接</h4><p>可以直接在tenmial中输入<code>ssh &lt;username&gt;@&lt;ip&gt;</code>进行连接，输入密码即可。但是通过vscode 结合插件会更方便。</p>
+<ul>
+<li><ol>
+<li>查看对象IP地址 <code>ifconfig</code></li>
+</ol>
+</li>
+<li><ol start="2">
+<li>vscode 安装插件 <code>Remote - SSH</code></li>
+</ol>
+</li>
+<li><ol start="3">
+<li>点击左下角的 <code>&gt;&lt;</code>，选择 &#96;Remote-SSH: Connect</li>
+</ol>
+</li>
+<li><ol start="4">
+<li>输入 <code>ssh &lt;username&gt;@&lt;ip&gt;</code>，输入密码即可。eg: ssh <a href="mailto:&#111;&#114;&#97;&#110;&#103;&#101;&#x70;&#105;&#64;&#49;&#x39;&#50;&#46;&#49;&#x36;&#x38;&#x2e;&#49;&#51;&#x37;&#46;&#52;&#55;">&#111;&#114;&#97;&#110;&#103;&#101;&#x70;&#105;&#64;&#49;&#x39;&#50;&#46;&#49;&#x36;&#x38;&#x2e;&#49;&#51;&#x37;&#46;&#52;&#55;</a></li>
+</ol>
+</li>
+</ul>
+<p>vscode 可以对该指令保存（在<code>~/.ssh/config</code>中），后续只要输入password即可连接。而不需要ip地址。</p>
+<h4 id="1-2-密匙连接"><a href="#1-2-密匙连接" class="headerlink" title="1.2 密匙连接"></a>1.2 密匙连接</h4><p>以上是采用密码连接的ssh方式，这样的方式不够安全，推荐采用<strong>密匙连接</strong>的方式。使用密匙连接的方式也很简单：</p>
+<ul>
+<li><p>首先，通过<code>ssh-keygen -t ed25519 -C &quot;rk3588 key&quot;</code>来生成密匙对（有rsa&#x2F;ed25519等多种算法生成），会保存在<code>~/.ssh</code>目录下（补全可知在windows下是<code>C:\Users\zhangxing\.ssh</code>）。可以自行设置密匙的名称和<code>passphrase</code>。</p>
+</li>
+<li><p>其次，将公钥<code>id_ed25519.pub</code>的内容复制到远程主机的<code>~/.ssh/authorized_keys</code>文件中。可以使用指令<code>ssh-copy-id &lt;username&gt;@&lt;ip&gt;</code>来复制。如果没有<code>ssh-copy-id</code>指令，可以使用<code>cat  /root/.ssh/id_*.pub | ssh user@ip &#39;cat  &gt;&gt; .ssh/authorized_keys&#39;</code>实现；或直接手动复制实现。参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhouzhihao/p/17087666.html">windows 下解决无 ssh-copy-id 问题</a></p>
+</li>
+<li><p>最后，通过<code>ssh -i ~/.ssh/id_ed25519 &lt;username&gt;@&lt;ip&gt;</code>来连接远程主机。例如:<code>ssh -i ~/.ssh/id_rk3588 orangepi@192.168.137.81</code>.也可以将该指令保存在<code>~/.ssh/config</code>中，这样vscode就可以直接左下角进行连接。</p>
+</li>
+</ul>
+<p><strong>为了保证安全，我们可以在服务器端的<code>/etc/ssh/sshd_config</code>文件中设置<code>PasswordAuthentication no</code>与<code>PubkeyAuthentication yes</code>，这样就可以禁止密码登录，只能通过密匙登录。就能更好地保证安全。</strong></p>
+<p>如果想要在windows下使用密匙连接，可以使用<code>ssh-agent</code>来管理密匙。首先，通过<code>eval &quot;$&#123;ssh-agent&#125;&quot;</code>来启动代理，然后通过<code>ssh-add ~/.ssh/id_ed25519</code>来添加密匙，此时需要输入一次<code>passphrase</code>，这样后续就不在需要输入<code>passphrase</code>，<code>ssh-agent</code>其实就是将<code>passphrase</code>写入内存并实时等待自动添加<code>passphrase</code>，是实时运行的，所以从安全和性能角度来看，需要及时用指令<code> ssh-agent -k</code>将其关闭。</p>
+<p>注：其实与Github的连接同样如此，只需要将公钥添加到Github的<code>SSH and GPG keys</code>中，我们就可以通过密匙连接Github。而Github不允许通过密码连接。所以需要本地会生成密匙并复制公匙到Github中。而与Github连接甚至通过ssh来clone都是需要提供密匙和<code>passphrase</code>的。我们可以将与Github相关的密匙路径写入<code>~/.ssh/config</code>中，例如：<code>IdentityFile ~/.ssh/id_github</code>，这样每次需要提供密匙时会自动先从<code>~/.ssh/config</code>中找到，这样就只要在终端写<code>ssh -T git@github.com</code>，而不需要<code>ssh -i ~/.ssh/id_github -T git@github.com</code>。我们也可以通过<code>ssh-agent</code>来代理密匙，从而节省输入<code>passphrase</code>的过程。</p>
+<p>视频参考：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Sx4y1y7B2/?spm_id_from=333.1007.tianma.2-1-4.click&vd_source=f5a6ec0f0843c18c2ae2750754961170">OpenSSH核心操作 | GitHub SSH连接</a></p>
+<h3 id="2-文件传输"><a href="#2-文件传输" class="headerlink" title="2. 文件传输"></a>2. 文件传输</h3><p>如果想进行本地与远程文件的传输，可以使用<code>scp</code>指令。 </p>
+<p>eg: scp <a href="mailto:&#111;&#x72;&#x61;&#x6e;&#x67;&#x65;&#x70;&#x69;&#x40;&#x31;&#x39;&#x32;&#x2e;&#x31;&#54;&#56;&#46;&#x31;&#51;&#55;&#x2e;&#x34;&#x37;">&#111;&#x72;&#x61;&#x6e;&#x67;&#x65;&#x70;&#x69;&#x40;&#x31;&#x39;&#x32;&#x2e;&#x31;&#54;&#56;&#46;&#x31;&#51;&#55;&#x2e;&#x34;&#x37;</a>:&#x2F;home&#x2F;orangepi&#x2F;Downloads&#x2F;test.txt C:\user\zhangxing\Desktop<br>这是远程-&gt;本地的传输，如果想本地-&gt;远程，只需要将路径调换即可。</p>
+
                 
             </div>
             <hr/>
@@ -423,7 +479,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://zhangx-lab.github.io/github_pages_test/github_pages_test/2024/05/09/dosomething/">https://zhangx-lab.github.io/github_pages_test/github_pages_test/2024/05/09/dosomething/</a>
+                    <a href="https://zhangx-lab.github.io/github_pages_test/github_pages_test/2024/05/09/SSH%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/">https://zhangx-lab.github.io/github_pages_test/github_pages_test/2024/05/09/SSH%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -537,9 +593,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;Current
+            </div>
             <div class="card">
                 <a href="/github_pages_test/2024/05/09/SSH%E8%BF%9C%E7%A8%8B%E7%AE%A1%E7%90%86/">
                     <div class="card-image">
@@ -557,9 +614,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2024-05-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2024-05-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -568,6 +625,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -578,13 +636,13 @@
                 Next&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/github_pages_test/2024/05/09/hello-world/">
+                <a href="/github_pages_test/2024/05/09/dosomething/">
                     <div class="card-image">
                         
                         
-                        <img src="/github_pages_test/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
+                        <img src="/github_pages_test/medias/featureimages/9.jpg" class="responsive-img" alt="great something">
                         
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title">great something</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
