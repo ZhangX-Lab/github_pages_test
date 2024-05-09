@@ -15,7 +15,7 @@ cmake和gcc用法
 推荐文章：
 思考
 
-简介&amp;emsp;&amp;emsp;首先是：什么是GCC？GCC是一种编译工具，可以实现预编译、编译、汇编、链接整个过程，这整个过程将高级语言翻译成了机">
+简介首先是：什么是GCC？GCC是一种编译工具，可以实现预编译、编译、汇编、链接整个过程，这整个过程将高级语言翻译成了机器语言。但是，GCC是针">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -416,8 +416,8 @@ cmake和gcc用法
 <li><a href="#%E6%8E%A8%E8%8D%90%E6%96%87%E7%AB%A0">推荐文章：</a></li>
 <li><a href="#%E6%80%9D%E8%80%83">思考</a></li>
 </ul>
-<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>&emsp;&emsp;首先是：什么是GCC？GCC是一种编译工具，可以实现预编译、编译、汇编、链接整个过程，这整个过程将高级语言翻译成了机器语言。但是，GCC是针对于LINUX的，在windows中并没有，因为微软有自己的开发，叫做MSVC，当然，GCC后来在windows也有，叫做MinGW，MinGW就是GCC在windows下的名称，我们使用它也可以像是GCC之于Linux一样。</p>
-<p>&emsp;&emsp;其次，为什么会有cmake？当我们的文件很大时，使用GCC是不方便的，所以有了make，make是一个构建生成器，通过写makefile文件来指定特定的项目构建工程，但make也有很多不足，像写makefile时，大工程下是很复杂的，往往改一点，makefile就要改很多地方。于是，就出现了cmake，cmake可以通过写CmakeList.txt，然后通过make，将该文件翻译为之前需要通过写makefile实现的作用，但是却没有makefile那样的副作用。</p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>首先是：什么是GCC？GCC是一种编译工具，可以实现预编译、编译、汇编、链接整个过程，这整个过程将高级语言翻译成了机器语言。但是，GCC是针对于LINUX的，在windows中并没有，因为微软有自己的开发，叫做MSVC，当然，GCC后来在windows也有，叫做MinGW，MinGW就是GCC在windows下的名称，我们使用它也可以像是GCC之于Linux一样。</p>
+<p>其次，为什么会有cmake？当我们的文件很大时，使用GCC是不方便的，所以有了make，make是一个构建生成器，通过写makefile文件来指定特定的项目构建工程，但make也有很多不足，像写makefile时，大工程下是很复杂的，往往改一点，makefile就要改很多地方。于是，就出现了cmake，cmake可以通过写CmakeList.txt，然后通过make，将该文件翻译为之前需要通过写makefile实现的作用，但是却没有makefile那样的副作用。</p>
 <h2 id="cmake和gcc用法"><a href="#cmake和gcc用法" class="headerlink" title="cmake和gcc用法"></a>cmake和gcc用法</h2><p>怎么使用cmake呢？</p>
 <ul>
 <li><ol>
@@ -433,7 +433,8 @@ cmake和gcc用法
 </ol>
 </li>
 </ul>
-<p>&emsp;&emsp;这样，就是cmake的用法，之后就会产生一个可执行的exe文件，可以通过.&#x2F;main来运行，.&#x2F;表示当前目录，所以具体要看生成的main.exe文件的位置。<br>注意：这里是用到了cmake去构建C&#x2F;C++项目,再用gcc编译生成文件。与vscode的插件是无关的，也就是说不用vscode提供的右上角编译运行按钮。vscode仅作为编写代码的平台。</p>
+<p>这样，就是cmake的用法，之后就会产生一个可执行的exe文件，可以通过.&#x2F;main来运行，.&#x2F;表示当前目录，所以具体要看生成的main.exe文件的位置。</p>
+<p>注意：这里是用到了cmake去构建C&#x2F;C++项目,再用gcc编译生成文件。与vscode的插件是无关的，也就是说不用vscode提供的右上角编译运行按钮。vscode仅作为编写代码的平台。</p>
 <h2 id="推荐文章："><a href="#推荐文章：" class="headerlink" title="推荐文章："></a>推荐文章：</h2><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/448884264">捋一捋gcc&#x2F;g++&#x2F;MingW&#x2F;MSVC与make&#x2F;CMake的关系</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhaotun123/article/details/100042073">Win10 + CMake + MinGW </a></p>
 <p><a target="_blank" rel="noopener" href="https://www.hahack.com/codes/cmake">CMake 入门实战</a></p>
@@ -441,11 +442,10 @@ cmake和gcc用法
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/602487280">CMake实践这本书的前部分——基础使用</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/602866160">CMake实践这本书的后部分——静态库和动态库</a></p>
 <h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ol>
-<li><p>使用cmake .. -Dproj&#x3D;<project name> -G “MinGW Makefiles”出现：<br>– The C compiler identification is unknown<br>– The CXX compiler identification is unknown<br>CMake Error at CMakeLists.txt:3 (project):<br>  The CMAKE_C_COMPILER:</p>
-<p> cl</p>
-</li>
+<li>使用cmake .. -Dproj&#x3D;<project name> -G “MinGW Makefiles”出现：</li>
 </ol>
-<p>  is not a full path and was not found in the PATH. ？</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">-- The C compiler identification is unknown</span><br><span class="line">-- The CXX compiler identification is unknown</span><br><span class="line">CMake Error at CMakeLists.txt:3 (project):</span><br><span class="line">  The CMAKE_C_COMPILER:</span><br><span class="line"> </span><br><span class="line">    cl</span><br><span class="line"> </span><br><span class="line">  is not a full path and was not found <span class="keyword">in</span> the PATH. ？</span><br></pre></td></tr></table></figure>
+
 <p>分析：这是系统环境变量没有包含gcc路径的原因。添加gcc路径即可。</p>
 <ol start="2">
 <li>使用vscode插件之间右上角编译运行按钮，有时可以编译，有时会出现找不到该文件的错误？</li>
